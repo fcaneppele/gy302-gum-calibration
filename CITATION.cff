@@ -1,0 +1,31 @@
+cff-version: 1.2.0
+message: "If you use this code or data, please cite the article and this archive."
+title: "GY-302 (BH1750FVI) calibration and GUM uncertainty budget, 1–43 lx: code and data"
+type: software
+version: "1.0.0"
+date-released: "2026-11-16"
+license: MIT
+authors:
+  - family-names: "Carvalho Neto"
+    given-names: "Joubert Alves de"
+    affiliation: "Faculdade de Ciências Agronômicas, São Paulo State University (Unesp)"
+  - family-names: "Fontana"
+    given-names: "Rodolfo Yuri de Almeida"
+    affiliation: "Escola Politécnica, University of São Paulo (USP)"
+  - family-names: "Gimenes"
+    given-names: "André Luiz Veiga"
+    affiliation: "Escola Politécnica, University of São Paulo (USP)"
+  - family-names: "Frigo"
+    given-names: "Murilo Miceno"
+    affiliation: "Instituto Federal de Educação, Ciência e Tecnologia de Mato Grosso do Sul (IFMS)"
+  - family-names: "Caneppele"
+    given-names: "Fernando de Lima"
+    affiliation: "Faculdade de Zootecnia e Engenharia de Alimentos, University of São Paulo (USP)"
+    orcid: "https://orcid.org/0000-0003-4498-8682"
+keywords:
+  - illuminance
+  - calibration
+  - measurement uncertainty
+  - GUM
+  - BH1750FVI
+  - low-cost sensor

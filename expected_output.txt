@@ -1,0 +1,83 @@
+Assertion check vs fixed values: {'raw': True, 'corrected': True}
+
+Stage 1 (raw, n=26): b1=0.7777 u(b1)=0.0061  b0=-0.4562 u(b0)=0.1826 r(b0,b1)=-0.816  s_res=0.538 (nu=24)  RMSE=0.517 MAE=0.402 R2=0.9985
+   CI95 b1=[0.7651 0.7903] b0=[-0.833 -0.079]  xbar=24.385 Sxx=7756.15  joint H0(b0=0,b1=1): F=2212.70, p=6.07e-28
+
+Stage 2 (corrected, n=22): b1=1.0123 u(b1)=0.0076  b0=0.2846 u(b0)=0.1791 r(b0,b1)=-0.809  s_res=0.493 (nu=20)  RMSE=0.470 MAE=0.360 R2=0.9989
+   CI95 b1=[0.9965 1.0281] b0=[-0.089  0.658]  xbar=19.091 Sxx=4219.82  joint H0(b0=0,b1=1): F=13.51, p=1.94e-04
+
+Direct error (indication - reference), n=22: mean=-0.520 lx, SD=0.512, CI95 mean=[-0.747 -0.292], p=1.06e-04; max|e|=1.50 lx; mean|e_rel| (E>=5 lx)=2.9 %
+   after +0.5 lx truncation correction: mean=-0.020 lx, p=0.86
+   residual relative at 1.78 lx = 27.1 % ; direct error at 1.78 lx = -43.8 %
+
+=== Budget scenario: with_ITR_6pct
+ E = 10 lx (x0 = 9.60):
+   Calibration function (b0, b1, incl. covariance)                A t (normal)  u=0.1275 c=1.0000 contr=0.1275 (3.1 %)
+   Residual scatter of a single indication (s_res)                A t (normal)  u=0.4934 c=1.0000 contr=0.4934 (47.1 %)
+   BH1750FVI raw resolution, 1 lx (H-resolution mode; truncated)  B rectangular u=0.2887 c=0.7873 contr=0.2273 (10.0 %)
+   Firmware truncation of corrected indication (int, 1 lx)        B rectangular u=0.2887 c=1.0123 contr=0.2922 (16.5 %)
+   ITR-3000 accuracy (±6 % of reading, manufacturer)              B rectangular u=0.3464 c=1.0000 contr=0.3464 (23.2 %)
+   ITR-3000 display resolution (0.01 lx)                          B rectangular u=0.0029 c=1.0000 contr=0.0029 (0.0 %)
+   u_c=0.719 lx  nu_eff=90  k95=2.03  U(k=2)=1.44 lx = 14.4 %  (<20 %: True)
+ E = 25 lx (x0 = 24.41):
+   Calibration function (b0, b1, incl. covariance)                A t (normal)  u=0.1127 c=1.0000 contr=0.1127 (1.1 %)
+   Residual scatter of a single indication (s_res)                A t (normal)  u=0.4934 c=1.0000 contr=0.4934 (21.3 %)
+   BH1750FVI raw resolution, 1 lx (H-resolution mode; truncated)  B rectangular u=0.2887 c=0.7873 contr=0.2273 (4.5 %)
+   Firmware truncation of corrected indication (int, 1 lx)        B rectangular u=0.2887 c=1.0123 contr=0.2922 (7.5 %)
+   ITR-3000 accuracy (±6 % of reading, manufacturer)              B rectangular u=0.8660 c=1.0000 contr=0.8660 (65.6 %)
+   ITR-3000 display resolution (0.1 lx)                           B rectangular u=0.0289 c=1.0000 contr=0.0289 (0.1 %)
+   u_c=1.070 lx  nu_eff=441  k95=2.01  U(k=2)=2.14 lx = 8.6 %  (<20 %: True)
+ E = 33 lx (x0 = 32.32):
+   Calibration function (b0, b1, incl. covariance)                A t (normal)  u=0.1455 c=1.0000 contr=0.1455 (1.2 %)
+   Residual scatter of a single indication (s_res)                A t (normal)  u=0.4934 c=1.0000 contr=0.4934 (14.2 %)
+   BH1750FVI raw resolution, 1 lx (H-resolution mode; truncated)  B rectangular u=0.2887 c=0.7873 contr=0.2273 (3.0 %)
+   Firmware truncation of corrected indication (int, 1 lx)        B rectangular u=0.2887 c=1.0123 contr=0.2922 (5.0 %)
+   ITR-3000 accuracy (±6 % of reading, manufacturer)              B rectangular u=1.1432 c=1.0000 contr=1.1432 (76.5 %)
+   ITR-3000 display resolution (0.1 lx)                           B rectangular u=0.0289 c=1.0000 contr=0.0289 (0.0 %)
+   u_c=1.307 lx  nu_eff=979  k95=2.00  U(k=2)=2.61 lx = 7.9 %  (<20 %: True)
+
+=== Budget scenario: with_ITR_3pct_sensitivity
+ E = 10 lx (x0 = 9.60):
+   Calibration function (b0, b1, incl. covariance)                A t (normal)  u=0.1275 c=1.0000 contr=0.1275 (3.8 %)
+   Residual scatter of a single indication (s_res)                A t (normal)  u=0.4934 c=1.0000 contr=0.4934 (57.0 %)
+   BH1750FVI raw resolution, 1 lx (H-resolution mode; truncated)  B rectangular u=0.2887 c=0.7873 contr=0.2273 (12.1 %)
+   Firmware truncation of corrected indication (int, 1 lx)        B rectangular u=0.2887 c=1.0123 contr=0.2922 (20.0 %)
+   ITR-3000 accuracy (±3 % of reading, manufacturer)              B rectangular u=0.1732 c=1.0000 contr=0.1732 (7.0 %)
+   ITR-3000 display resolution (0.01 lx)                          B rectangular u=0.0029 c=1.0000 contr=0.0029 (0.0 %)
+   u_c=0.653 lx  nu_eff=61  k95=2.04  U(k=2)=1.31 lx = 13.1 %  (<20 %: True)
+ E = 25 lx (x0 = 24.41):
+   Calibration function (b0, b1, incl. covariance)                A t (normal)  u=0.1127 c=1.0000 contr=0.1127 (2.2 %)
+   Residual scatter of a single indication (s_res)                A t (normal)  u=0.4934 c=1.0000 contr=0.4934 (41.9 %)
+   BH1750FVI raw resolution, 1 lx (H-resolution mode; truncated)  B rectangular u=0.2887 c=0.7873 contr=0.2273 (8.9 %)
+   Firmware truncation of corrected indication (int, 1 lx)        B rectangular u=0.2887 c=1.0123 contr=0.2922 (14.7 %)
+   ITR-3000 accuracy (±3 % of reading, manufacturer)              B rectangular u=0.4330 c=1.0000 contr=0.4330 (32.2 %)
+   ITR-3000 display resolution (0.1 lx)                           B rectangular u=0.0289 c=1.0000 contr=0.0289 (0.1 %)
+   u_c=0.763 lx  nu_eff=114  k95=2.02  U(k=2)=1.53 lx = 6.1 %  (<20 %: True)
+ E = 33 lx (x0 = 32.32):
+   Calibration function (b0, b1, incl. covariance)                A t (normal)  u=0.1455 c=1.0000 contr=0.1455 (2.9 %)
+   Residual scatter of a single indication (s_res)                A t (normal)  u=0.4934 c=1.0000 contr=0.4934 (33.4 %)
+   BH1750FVI raw resolution, 1 lx (H-resolution mode; truncated)  B rectangular u=0.2887 c=0.7873 contr=0.2273 (7.1 %)
+   Firmware truncation of corrected indication (int, 1 lx)        B rectangular u=0.2887 c=1.0123 contr=0.2922 (11.7 %)
+   ITR-3000 accuracy (±3 % of reading, manufacturer)              B rectangular u=0.5716 c=1.0000 contr=0.5716 (44.8 %)
+   ITR-3000 display resolution (0.1 lx)                           B rectangular u=0.0289 c=1.0000 contr=0.0289 (0.1 %)
+   u_c=0.854 lx  nu_eff=178  k95=2.01  U(k=2)=1.71 lx = 5.2 %  (<20 %: True)
+
+=== Budget scenario: without_ITR
+ E = 10 lx (x0 = 9.60):
+   Calibration function (b0, b1, incl. covariance)                A t (normal)  u=0.1275 c=1.0000 contr=0.1275 (4.1 %)
+   Residual scatter of a single indication (s_res)                A t (normal)  u=0.4934 c=1.0000 contr=0.4934 (61.4 %)
+   BH1750FVI raw resolution, 1 lx (H-resolution mode; truncated)  B rectangular u=0.2887 c=0.7873 contr=0.2273 (13.0 %)
+   Firmware truncation of corrected indication (int, 1 lx)        B rectangular u=0.2887 c=1.0123 contr=0.2922 (21.5 %)
+   u_c=0.630 lx  nu_eff=53  k95=2.05  U(k=2)=1.26 lx = 12.6 %  (<20 %: True)
+ E = 25 lx (x0 = 24.41):
+   Calibration function (b0, b1, incl. covariance)                A t (normal)  u=0.1127 c=1.0000 contr=0.1127 (3.2 %)
+   Residual scatter of a single indication (s_res)                A t (normal)  u=0.4934 c=1.0000 contr=0.4934 (61.9 %)
+   BH1750FVI raw resolution, 1 lx (H-resolution mode; truncated)  B rectangular u=0.2887 c=0.7873 contr=0.2273 (13.1 %)
+   Firmware truncation of corrected indication (int, 1 lx)        B rectangular u=0.2887 c=1.0123 contr=0.2922 (21.7 %)
+   u_c=0.627 lx  nu_eff=52  k95=2.05  U(k=2)=1.25 lx = 5.0 %  (<20 %: True)
+ E = 33 lx (x0 = 32.32):
+   Calibration function (b0, b1, incl. covariance)                A t (normal)  u=0.1455 c=1.0000 contr=0.1455 (5.3 %)
+   Residual scatter of a single indication (s_res)                A t (normal)  u=0.4934 c=1.0000 contr=0.4934 (60.6 %)
+   BH1750FVI raw resolution, 1 lx (H-resolution mode; truncated)  B rectangular u=0.2887 c=0.7873 contr=0.2273 (12.9 %)
+   Firmware truncation of corrected indication (int, 1 lx)        B rectangular u=0.2887 c=1.0123 contr=0.2922 (21.3 %)
+   u_c=0.634 lx  nu_eff=54  k95=2.05  U(k=2)=1.27 lx = 3.8 %  (<20 %: True)
